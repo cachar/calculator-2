@@ -16,13 +16,13 @@ while True:
 
     if response[0] == "q" or response[0]== "Q":
         break
-    elif response[0] =="+":
+    elif response[0] =="+" or response[0] == "add":
         result = add(num1, num2)
-    elif response[0] =="-":
+    elif response[0] =="-" or response[0] == "subtract":
         result = subtract(num1, num2)
-    elif response[0] =="*":
+    elif response[0] =="*" or response[0] == "multiply":
         result = multiply(num1,num2)
-    elif response[0] =="/":
+    elif response[0] =="/" or response[0] == "divide":
         result = divide(num1, num2)
     elif response[0] =="%" or response[0] == "mod":
         result = mod(num1,num2)
