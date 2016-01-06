@@ -6,7 +6,7 @@ calculator program yourself in this file.
 """
 
 from arithmetic import *
-math_functions = ['+', '-', '*', '/', '%', '**2', "**3", "**" ]
+math_functions = ['+', '-', '*', '/', '%', '**2', "**3", "**", "square", "cube", "mod", "pow"]
 user_entry = raw_input("Please type an arithmetic function followed by 2 numbers. ")
 # Your code goes here
 while True:
@@ -26,13 +26,13 @@ while True:
                 result = multiply(num1,num2)
             elif response[0] =="/":
                 result = divide(num1, num2)
-            elif response[0] =="%":
+            elif response[0] =="%" or response[0] == "mod":
                 result = mod(num1,num2)
-            elif response[0] =="**2":
+            elif response[0] =="**2" or response[0] == "square":
                 result = square(num1)
-            elif response[0] =="**3":
+            elif response[0] =="**3" or response[0] == "cube":
                 result = cube(num1)
-            elif response[0] =="**":
+            elif response[0] =="**" or response[0] == "pow":
                 result = power(num1, num2)
             print "The answer is %.2f" %(result)
             break
