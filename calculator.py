@@ -5,33 +5,41 @@ Using our arithmetic.py file from Euser_entryercise02, create the
 calculator program yourself in this file.
 """
 
-from arithmetic import *
-user_entry = raw_input("Please type an arithmetic function followed by 2 numbers. ")
+from arithmetic_2 import *
+user_entry = raw_input("Please type an arithmetic function followed by any numbers separated by spaces. ")
 # Your code goes here
+def integerizing(numbers): 
+    """We are turning a list of strings into a list of integers"""  
+    integer_nums =[]
+    for num in numbers:
+        integer_nums.append(int(num))
+    print integer_nums
+    return integer_nums
+
 while True:
 
     response = user_entry.split(" ")
-    num1 = int(response[1])
-    num2 = int(response[2])
+    numbers = response[1:]
 
+    integerizing(numbers)
     if response[0] == "q" or response[0]== "Q":
         break
     elif response[0] =="+" or response[0] == "add":
-        result = add(num1, num2)
+        result = add(integer_nums)
     elif response[0] =="-" or response[0] == "subtract":
-        result = subtract(num1, num2)
+        result = subtract(integer_nums)
     elif response[0] =="*" or response[0] == "multiply":
-        result = multiply(num1,num2)
+        result = multiply(integer_nums)
     elif response[0] =="/" or response[0] == "divide":
-        result = divide(num1, num2)
+        result = divide(integer_nums)
     elif response[0] =="%" or response[0] == "mod":
-        result = mod(num1,num2)
+        result = mod(integer_nums)
     elif response[0] =="**2" or response[0] == "square":
-        result = square(num1)
+        result = square(integer_nums)
     elif response[0] =="**3" or response[0] == "cube":
-        result = cube(num1)
+        result = cube(integer_nums)
     elif response[0] =="**" or response[0] == "pow":
-        result = power(num1, num2)
+        result = power(integer_nums)
         print "The answer is %.2f" %(result)
         break
     else:
