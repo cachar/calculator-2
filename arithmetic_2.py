@@ -46,5 +46,8 @@ def power(numbers):
     return final_answer
 
 
-def mod(num1, num2):
-    return num1 % num2
+def mod(numbers):
+    final_answer = numbers[0]
+    for num in numbers[1]:
+        final_answer %= float(num)
+    return final_answer
